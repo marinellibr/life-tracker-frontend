@@ -1,0 +1,54 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    // flex-direction: column;
+    .index{
+        width: 25%;
+        height: 100%;
+        .title{
+            font-weight: bold;
+            font-size: 5rem;
+            color: #13678A;
+            font-family: 'Playfair Display', serif;
+        }
+        .actions{
+            display: flex;
+            gap: 16px;
+            
+            button{
+                width: 192px;
+                height: 64px;
+                border: 5px solid #13678A;
+                border-radius: 16px;
+                background-color: #13678A;
+                color: white;
+                font-size: 1rem;
+                cursor: pointer;
+    
+                &.primary{
+                    &:hover{
+                        border: 5px solid rgba(14,74,99,1);
+                    }
+                }
+                &.outline{
+                    background-color: white;
+                    color: #13678A;
+    
+                    &:hover{
+                        border: 5px solid rgba(14,74,99,1);
+                    }
+                }
+    
+                
+            }
+        }
+    }
+    .forms{
+        width: 75%;
+        height: 100%;
+    }
+}
