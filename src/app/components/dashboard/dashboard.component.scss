@@ -1,0 +1,101 @@
+*{
+    font-family: 'Playfair Display', serif;
+}
+
+.container{
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: #E2FAF3;
+
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+
+    // font-family: 'Playfair Display', serif;
+
+    h1{
+        color: #467459;
+        font-weight: 600;
+        font-size: 64px;
+        padding-top: 64px;
+    }
+
+    .category{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        .title{
+            font-size: 48px;
+        }
+        .calendar{
+            display: flex;
+            gap: 2px;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 1180px;
+            .month{
+                display: flex;
+                gap: 4px;
+                .name{
+                    font-size: 24px;
+                    text-align: right;
+                }
+                .days{
+                    display: flex;
+                    gap: 2px;
+                    .day{
+                        width: 32px;
+                        aspect-ratio: 1;
+                        background-color: #d9d9d9;
+
+                        &.a1{
+                            background-color: red;
+                        }
+
+                        &.a2{
+                            background-color: green;
+                        }
+
+                        &.a3{
+                            background-color: #467459;
+                        }
+
+                        &.a4{
+                            background-color: violet;
+                        }
+
+                        &.a5{
+                            background-color: yellow;
+                        }
+                    }
+                }
+            }
+        }
+        .subtitle{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 1180px;
+            gap: 2px;
+
+            .info{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+
+                .color{
+                    width: 32px;
+                    aspect-ratio: 1;
+                    background-color: #d9d9d9;
+                }
+
+                .info{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

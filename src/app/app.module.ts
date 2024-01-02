@@ -9,6 +9,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { CheckinComponent } from './components/checkin/checkin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndexComponent } from './components/index/index.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CalendarDefaultValue } from './models/calendar';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,14 @@ import { IndexComponent } from './components/index/index.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    
   ],
-  providers: [],
+  providers: [
+    CalendarDefaultValue
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

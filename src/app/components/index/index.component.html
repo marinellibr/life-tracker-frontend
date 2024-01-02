@@ -4,11 +4,12 @@
             Welcome.
         </div>
         <div class="actions">
-            <button class="primary">LogIn</button>
-            <button class="outline">SignUp</button>
+            <button class="primary" (click)="toggleForm(0)">LogIn</button>
+            <button class="outline" (click)="toggleForm(1)">SignUp</button>
         </div>
     </div>
     <div class="form">
-        
+        <app-login *ngIf="form === 0"></app-login>
+        <app-signup *ngIf="form === 1"></app-signup>
     </div>
 </div>

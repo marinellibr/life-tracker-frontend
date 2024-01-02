@@ -1,1 +1,276 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h1>Dashboard.</h1>
+    <section class="category">
+        <div class="title">Day log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.daily" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Anxiety log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.anxiety" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Health log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.health" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Exercise log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.exercise" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Hobby log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.hobby" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Sexual log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.sexual" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Sleep log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.sleep" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category">
+        <div class="title">Work log.</div>
+        <div class="calendar">
+            <div class="month" *ngFor="let month of calendar">
+                <div class="name">{{month.name}}</div>
+                <div class="days">
+                    <div class="day" [ngClass]="'a' + day.work" *ngFor="let day of month.days"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Sick: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Not good: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Average: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Great: xx days.</div>
+            </div>
+            <div class="info">
+                <div class="color"></div>
+                <div class="info">Very well: xx days.</div>
+            </div>
+        </div>
+    </section>
+
+    
+</div>

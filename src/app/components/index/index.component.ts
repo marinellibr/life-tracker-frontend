@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
-
+  form = 0;
+  
+  toggleForm(form: number){
+    this.form = form;
+  }
 }

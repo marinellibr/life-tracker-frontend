@@ -7,8 +7,9 @@
     align-items: center;
     // flex-direction: column;
     .index{
-        width: 25%;
-        height: 100%;
+        // width: 25%;
+        padding-left: 64px;
+        padding-right: 32px;
         .title{
             font-weight: bold;
             font-size: 5rem;
@@ -47,8 +48,14 @@
             }
         }
     }
-    .forms{
+    .form{
         width: 75%;
         height: 100%;
+        background-color: #13678A;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }

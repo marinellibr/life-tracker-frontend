@@ -10,4 +10,8 @@ export class UserService {
   getAllUsers(): Observable<any>{
     return this.httpClient.get<any>('https://life-tracker-backend-3337f07a8458.herokuapp.com/users');
   }
+
+  insertUser(body: any): Observable<any>{
+    return this.httpClient.post<any>('https://life-tracker-backend-3337f07a8458.herokuapp.com/users', body);
+  }
 }
