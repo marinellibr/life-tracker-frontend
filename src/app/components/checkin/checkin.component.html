@@ -1,1 +1,171 @@
-<p>checkin works!</p>
+<div class="container">
+    <nav class="nav">
+        <a href="/dashboard">Dashboard</a>
+        <a>LogOut</a>
+    </nav>
+
+    <section>
+        <!-- <input type="date" [(ngModel)]="today" [value]="today"> -->
+
+        <ng-container *ngIf="step == 1" >
+            <ng-container *ngTemplateOutlet="day"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 2">
+            <ng-container *ngTemplateOutlet="health"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 3">
+            <ng-container *ngTemplateOutlet="anxiety"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 4">
+            <ng-container *ngTemplateOutlet="exercise"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 5">
+            <ng-container *ngTemplateOutlet="hobby"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 6">
+            <ng-container *ngTemplateOutlet="sexual"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 7">
+            <ng-container *ngTemplateOutlet="sleep"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="step == 8">
+            <ng-container *ngTemplateOutlet="work"></ng-container>
+        </ng-container>
+        
+        <button (click)="previousStep()">back</button>
+        <button (click)="nextStep()">next</button>
+    </section>
+</div>
+
+<ng-template #day>
+    <div class="category">
+        <h1>Day log.</h1>
+        <h3>How was your day?</h3>
+    </div>
+
+    <div class="rating">
+        <p>Not good.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>Very good.</p>
+    </div>
+</ng-template>
+
+<ng-template #health>
+    <div class="category">
+        <h1>Health log.</h1>
+        <h3>How were you feeling today?</h3>
+    </div>
+
+    <div class="rating">
+        <p>Sick.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>Very well.</p>
+    </div>
+</ng-template>
+
+<ng-template #anxiety>
+    <div class="category">
+        <h1>Anxiety log.</h1>
+        <h3>How were you feeling today?</h3>
+    </div>
+
+    <div class="rating">
+        <p>Very anxious.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>Not at all.</p>
+    </div>
+</ng-template>
+
+<ng-template #exercise>
+    <div class="category">
+        <h1>Exercise log.</h1>
+        <h3>How much exercise did you do today?</h3>
+    </div>
+
+    <div class="rating">
+        <p>None.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>Very active.</p>
+    </div>
+</ng-template>
+
+<ng-template #hobby>
+    <div class="category">
+        <h1>Hobby log.</h1>
+        <h3>Did you gave time to your hobbies today?</h3>
+    </div>
+
+    <div class="rating">
+        <p>Not much.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>A lot.</p>
+    </div>
+</ng-template>
+
+<ng-template #sexual>
+    <div class="category">
+        <h1>Sexual log.</h1>
+        <h3>How sexually active were you?</h3>
+    </div>
+
+    <div class="rating">
+        <p>None.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate5"></div>
+        <p>Active.</p>
+    </div>
+</ng-template>
+
+<ng-template #sleep>
+    <div class="category">
+        <h1>Sleep log.</h1>
+        <h3>How well did you sleep?</h3>
+    </div>
+
+    <div class="rating">
+        <p>Not good.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>Well rested.</p>
+    </div>
+</ng-template>
+
+<ng-template #work>
+    <div class="category">
+        <h1>Work log.</h1>
+        <h3>How was your work today?</h3>
+    </div>
+
+    <div class="rating">
+        <p>Not good.</p>
+        <div class="sqr rate1"></div>
+        <div class="sqr rate2"></div>
+        <div class="sqr rate3"></div>
+        <div class="sqr rate4"></div>
+        <div class="sqr rate5"></div>
+        <p>Wetn great.</p>
+    </div>
+</ng-template>

@@ -10,7 +10,6 @@ import { CheckinComponent } from './components/checkin/checkin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndexComponent } from './components/index/index.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CalendarDefaultValue } from './models/calendar';
 
 @NgModule({
   declarations: [
@@ -29,9 +28,7 @@ import { CalendarDefaultValue } from './models/calendar';
     FormsModule,
     
   ],
-  providers: [
-    CalendarDefaultValue
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

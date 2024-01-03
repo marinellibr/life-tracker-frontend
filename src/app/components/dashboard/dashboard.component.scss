@@ -9,16 +9,26 @@
 
     display: flex;
     align-items: center;
-    // justify-content: center;
     flex-direction: column;
 
-    // font-family: 'Playfair Display', serif;
+    .nav{
+        width: calc(100% - 32px);
+        height: 64px;
+        background-color: #467459;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
 
     h1{
         color: #467459;
         font-weight: 600;
         font-size: 64px;
-        padding-top: 64px;
+        padding-top: 16px;
     }
 
     .category{
@@ -46,28 +56,32 @@
                     display: flex;
                     gap: 2px;
                     .day{
+                        // box-sizing: border-box;
+                        // -moz-box-sizing: border-box;
+                        // -webkit-box-sizing: border-box;
+                        // border: 2px solid EAE9F2;
                         width: 32px;
                         aspect-ratio: 1;
-                        background-color: #d9d9d9;
+                        background-color: lightcoral;
 
                         &.a1{
-                            background-color: red;
+                            background-color: #DDEDE3;
                         }
-
+                
                         &.a2{
-                            background-color: green;
+                            background-color: #C7D9CE;
                         }
-
+                
                         &.a3{
-                            background-color: #467459;
+                            background-color: #90B69F;
                         }
-
+                
                         &.a4{
-                            background-color: violet;
+                            background-color: #69A07F;
                         }
-
+                
                         &.a5{
-                            background-color: yellow;
+                            background-color: #467459;
                         }
                     }
                 }
@@ -89,7 +103,27 @@
                 .color{
                     width: 32px;
                     aspect-ratio: 1;
-                    background-color: #d9d9d9;
+                    background-color: #EAE9F2;
+
+                    &.a1{
+                        background-color: #DDEDE3;
+                    }
+            
+                    &.a2{
+                        background-color: #C7D9CE;
+                    }
+            
+                    &.a3{
+                        background-color: #90B69F;
+                    }
+            
+                    &.a4{
+                        background-color: #69A07F;
+                    }
+            
+                    &.a5{
+                        background-color: #467459;
+                    }
                 }
 
                 .info{
@@ -97,5 +131,7 @@
                 }
             }
         }
+
+        
     }
 }
