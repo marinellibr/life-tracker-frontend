@@ -5,18 +5,23 @@ import { IndexComponent } from './components/index/index.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CheckinComponent } from './components/checkin/checkin.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: "", component: IndexComponent},
+  { path: 'index', component: IndexComponent },
   // {path: "login", component: LoginComponent},
   // {path: "signup", component: SignupComponent},
-  {path: "dashboard", component: DashboardComponent},
-  {path: "checkin", component: CheckinComponent},
-  {path: "**", pathMatch: "full", redirectTo: ""},
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'checkin', component: CheckinComponent, canActivate: [authGuard] },
+  { path: '**', pathMatch: 'full', redirectTo: 'index' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

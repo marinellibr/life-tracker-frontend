@@ -1,137 +1,151 @@
-*{
-    font-family: 'Playfair Display', serif;
+* {
+  font-family: "Playfair Display", serif;
 }
 
-.container{
-    max-width: 100vw;
-    min-height: 100vh;
-    background-color: #E2FAF3;
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #e2faf3;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .nav {
+    width: calc(100% - 32px);
+    height: 64px;
+    background-color: #467459;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    color: white;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      width: 128px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+
+      &:hover {
+        background-color: #2e4437;
+      }
+    }
+  }
+
+  h1 {
+    color: #467459;
+    font-weight: 600;
+    font-size: 64px;
+    padding-top: 16px;
+  }
+
+  .category {
+    display: flex;
     flex-direction: column;
-
-    .nav{
-        width: calc(100% - 32px);
-        height: 64px;
-        background-color: #467459;
-
+    align-items: center;
+    gap: 8px;
+    .title {
+      font-size: 48px;
+    }
+    .calendar {
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 1180px;
+      .month {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-        padding-right: 16px;
-        padding-left: 16px;
-    }
+        gap: 4px;
+        .name {
+          font-size: 24px;
+          text-align: right;
+        }
+        .days {
+          display: flex;
+          gap: 2px;
+          .day {
+            // box-sizing: border-box;
+            // -moz-box-sizing: border-box;
+            // -webkit-box-sizing: border-box;
+            // border: 2px solid EAE9F2;
+            width: 32px;
+            aspect-ratio: 1;
+            background-color: lightcoral;
 
-    h1{
-        color: #467459;
-        font-weight: 600;
-        font-size: 64px;
-        padding-top: 16px;
-    }
+            &.a1 {
+              background-color: #ddede3;
+            }
 
-    .category{
+            &.a2 {
+              background-color: #c7d9ce;
+            }
+
+            &.a3 {
+              background-color: #90b69f;
+            }
+
+            &.a4 {
+              background-color: #69a07f;
+            }
+
+            &.a5 {
+              background-color: #467459;
+            }
+          }
+        }
+      }
+    }
+    .subtitle {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 1180px;
+      gap: 2px;
+
+      .info {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 8px;
-        .title{
-            font-size: 48px;
-        }
-        .calendar{
-            display: flex;
-            gap: 2px;
-            flex-direction: column;
-            align-items: flex-end;
-            min-width: 1180px;
-            .month{
-                display: flex;
-                gap: 4px;
-                .name{
-                    font-size: 24px;
-                    text-align: right;
-                }
-                .days{
-                    display: flex;
-                    gap: 2px;
-                    .day{
-                        // box-sizing: border-box;
-                        // -moz-box-sizing: border-box;
-                        // -webkit-box-sizing: border-box;
-                        // border: 2px solid EAE9F2;
-                        width: 32px;
-                        aspect-ratio: 1;
-                        background-color: lightcoral;
+        justify-content: center;
+        gap: 2px;
 
-                        &.a1{
-                            background-color: #DDEDE3;
-                        }
-                
-                        &.a2{
-                            background-color: #C7D9CE;
-                        }
-                
-                        &.a3{
-                            background-color: #90B69F;
-                        }
-                
-                        &.a4{
-                            background-color: #69A07F;
-                        }
-                
-                        &.a5{
-                            background-color: #467459;
-                        }
-                    }
-                }
-            }
-        }
-        .subtitle{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 1180px;
-            gap: 2px;
+        .color {
+          width: 32px;
+          aspect-ratio: 1;
+          background-color: #eae9f2;
 
-            .info{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 2px;
+          &.a1 {
+            background-color: #ddede3;
+          }
 
-                .color{
-                    width: 32px;
-                    aspect-ratio: 1;
-                    background-color: #EAE9F2;
+          &.a2 {
+            background-color: #c7d9ce;
+          }
 
-                    &.a1{
-                        background-color: #DDEDE3;
-                    }
-            
-                    &.a2{
-                        background-color: #C7D9CE;
-                    }
-            
-                    &.a3{
-                        background-color: #90B69F;
-                    }
-            
-                    &.a4{
-                        background-color: #69A07F;
-                    }
-            
-                    &.a5{
-                        background-color: #467459;
-                    }
-                }
+          &.a3 {
+            background-color: #90b69f;
+          }
 
-                .info{
-                    font-size: 24px;
-                }
-            }
+          &.a4 {
+            background-color: #69a07f;
+          }
+
+          &.a5 {
+            background-color: #467459;
+          }
         }
 
-        
+        .info {
+          font-size: 24px;
+        }
+      }
     }
+  }
 }

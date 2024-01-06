@@ -10,20 +10,24 @@ import { LoginService } from 'src/app/services/login.service';
 export class LoginComponent {
   constructor(private loginService: LoginService, private router: Router) {}
 
-  username: string = "";
-  password: string = "";
+  username: string = '';
+  password: string = '';
 
   logIn() {
     let body = {
       username: this.username,
-      password: this.password
-    }
+      password: this.password,
+    };
 
     this.loginService.sendLogin(body).subscribe((data) => {
-      if(data.logged){
+      if (data.logged) {
+        console.log(data);
+        localStorage.setItem('token', '12345678');
+        localStorage.setItem('id', data.userId);
+        // localStorage.setItem('', '');
         this.router.navigateByUrl('dashboard');
       } else {
-        console.warn("Error on login");
+        console.warn('Error on login');
       }
     });
   }

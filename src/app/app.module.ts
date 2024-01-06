@@ -10,6 +10,7 @@ import { CheckinComponent } from './components/checkin/checkin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndexComponent } from './components/index/index.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalComponent } from './components/shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SignupComponent,
     CheckinComponent,
     DashboardComponent,
-    IndexComponent
+    IndexComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
