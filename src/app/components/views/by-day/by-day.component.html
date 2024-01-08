@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="categories">
+    <button
+      [ngClass]="category == 1 ? 'selected' : null"
+      (click)="changeCategory(1)"
+    >
+      day log.
+    </button>
+    <button
+      [ngClass]="category == 2 ? 'selected' : null"
+      (click)="changeCategory(2)"
+    >
+      anxiety log.
+    </button>
+    <button
+      [ngClass]="category == 3 ? 'selected' : null"
+      (click)="changeCategory(3)"
+    >
+      health log.
+    </button>
+    <button
+      [ngClass]="category == 4 ? 'selected' : null"
+      (click)="changeCategory(4)"
+    >
+      exercise log.
+    </button>
+    <button
+      [ngClass]="category == 5 ? 'selected' : null"
+      (click)="changeCategory(5)"
+    >
+      hobby log.
+    </button>
+    <button
+      [ngClass]="category == 6 ? 'selected' : null"
+      (click)="changeCategory(6)"
+    >
+      sexual log.
+    </button>
+    <button
+      [ngClass]="category == 7 ? 'selected' : null"
+      (click)="changeCategory(7)"
+    >
+      sleep log.
+    </button>
+    <button
+      [ngClass]="category == 8 ? 'selected' : null"
+      (click)="changeCategory(8)"
+    >
+      work log.
+    </button>
+  </div>
+  <div class="calendar-container">
+    <h1>{{ categoryName }}</h1>
+    <div class="calendar">
+      <div class="month" *ngFor="let month of calendar">
+        <div class="name">{{ month.month }}</div>
+        <div class="days">
+          <div
+            class="day"
+            [ngClass]="'a' + day.dayLog"
+            *ngFor="let day of month.days"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

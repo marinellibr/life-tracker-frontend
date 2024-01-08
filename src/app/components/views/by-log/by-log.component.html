@@ -1,0 +1,404 @@
+<div class="container">
+  <h1>Dashboard.</h1>
+  <section class="category">
+    <div class="title">
+      Day log.
+      <button *ngIf="!step.includes(1)" (click)="expandSection(1)">+</button>
+      <button *ngIf="step.includes(1) && show" (click)="collapseSection(1)">
+        -
+      </button>
+    </div>
+    <div class="dayLog" *ngIf="step.includes(1) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.dayLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Anxiety log.
+      <button *ngIf="!step.includes(2)" (click)="expandSection(2)">+</button>
+      <button *ngIf="step.includes(2) && show" (click)="collapseSection(2)">
+        -
+      </button>
+    </div>
+    <div class="anxietyLog" *ngIf="step.includes(2) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.anxietyLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Health log.
+      <button *ngIf="!step.includes(3)" (click)="expandSection(3)">+</button>
+      <button *ngIf="step.includes(3) && show" (click)="collapseSection(3)">
+        -
+      </button>
+    </div>
+    <div class="healthLog" *ngIf="step.includes(3) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.healthLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.healthLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Exercise log.
+      <button *ngIf="!step.includes(4)" (click)="expandSection(4)">+</button>
+      <button *ngIf="step.includes(4) && show" (click)="collapseSection(4)">
+        -
+      </button>
+    </div>
+    <div class="exerciseLog" *ngIf="step.includes(4) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.exerciseLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Hobby log.
+      <button *ngIf="!step.includes(5)" (click)="expandSection(5)">+</button>
+      <button *ngIf="step.includes(5) && show" (click)="collapseSection(5)">
+        -
+      </button>
+    </div>
+    <div class="hobbyLog" *ngIf="step.includes(5) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.hobbyLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Sexual log.
+      <button *ngIf="!step.includes(6)" (click)="expandSection(6)">+</button>
+      <button *ngIf="step.includes(6) && show" (click)="collapseSection(6)">
+        -
+      </button>
+    </div>
+    <div class="sexLog" *ngIf="step.includes(6) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.sexualLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Sleep log.
+      <button *ngIf="!step.includes(7)" (click)="expandSection(7)">+</button>
+      <button *ngIf="step.includes(7) && show" (click)="collapseSection(7)">
+        -
+      </button>
+    </div>
+    <div class="sleepLog" *ngIf="step.includes(7) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.sleepLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="title">
+      Work log.
+      <button *ngIf="!step.includes(8)" (click)="expandSection(8)">+</button>
+      <button *ngIf="step.includes(8) && show" (click)="collapseSection(8)">
+        -
+      </button>
+    </div>
+    <div class="workLog" *ngIf="step.includes(8) && show">
+      <div class="calendar">
+        <div class="month" *ngFor="let month of calendar">
+          <div class="name">{{ month.month }}</div>
+          <div class="days">
+            <div
+              class="day"
+              [ngClass]="'a' + day.workLog"
+              *ngFor="let day of month.days"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="subtitle">
+        <div class="info">
+          <div class="color a1"></div>
+          <div class="info">Sick: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a2"></div>
+          <div class="info">Not good: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a3"></div>
+          <div class="info">Average: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a4"></div>
+          <div class="info">Great: xx days.</div>
+        </div>
+        <div class="info">
+          <div class="color a5"></div>
+          <div class="info">Very well: xx days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

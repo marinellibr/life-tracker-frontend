@@ -1,0 +1,139 @@
+// .category {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 8px;
+//   .title {
+//     font-size: 48px;
+//   }
+//   .calendar {
+//     display: flex;
+//     gap: 2px;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     min-width: 1180px;
+//     .month {
+//       display: flex;
+//       gap: 4px;
+//       .name {
+//         font-size: 24px;
+//         text-align: right;
+//       }
+//       .days {
+//         display: flex;
+//         gap: 2px;
+//         .day {
+//           // box-sizing: border-box;
+//           // -moz-box-sizing: border-box;
+//           // -webkit-box-sizing: border-box;
+//           // border: 2px solid EAE9F2;
+//           width: 32px;
+//           aspect-ratio: 1;
+//           background-color: lightcoral;
+
+//           &.a1 {
+//             background-color: #ddede3;
+//           }
+
+//           &.a2 {
+//             background-color: #c7d9ce;
+//           }
+
+//           &.a3 {
+//             background-color: #90b69f;
+//           }
+
+//           &.a4 {
+//             background-color: #69a07f;
+//           }
+
+//           &.a5 {
+//             background-color: #467459;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.container {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: center;
+  .categories {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      width: 160px;
+      height: 64px;
+      border: none;
+      background-color: #90b69f;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #69a07f;
+      }
+
+      &.selected {
+        background-color: #467459;
+      }
+    }
+  }
+  .calendar-container {
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 16px;
+      color: #467459;
+    }
+    .calendar {
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 1180px;
+      .month {
+        display: flex;
+        gap: 2px;
+
+        .name {
+          font-size: 24px;
+          text-align: right;
+          color: #467459;
+        }
+        .days {
+          display: flex;
+          gap: 2px;
+          .day {
+            width: 32px;
+            aspect-ratio: 1;
+            background-color: #ffd0bd;
+
+            &.a1 {
+              background-color: #ddede3;
+            }
+
+            &.a2 {
+              background-color: #c7d9ce;
+            }
+
+            &.a3 {
+              background-color: #90b69f;
+            }
+
+            &.a4 {
+              background-color: #69a07f;
+            }
+
+            &.a5 {
+              background-color: #467459;
+            }
+          }
+        }
+      }
+    }
+  }
+}

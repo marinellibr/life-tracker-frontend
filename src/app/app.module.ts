@@ -11,6 +11,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndexComponent } from './components/index/index.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './components/shared/modal/modal.component';
+import { ByDayComponent } from './components/views/by-day/by-day.component';
+import { ByLogComponent } from './components/views/by-log/by-log.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ModalComponent } from './components/shared/modal/modal.component';
     CheckinComponent,
     DashboardComponent,
     IndexComponent,
-    ModalComponent
+    ModalComponent,
+    ByDayComponent,
+    ByLogComponent
   ],
   imports: [
     BrowserModule,
